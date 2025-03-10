@@ -1,0 +1,31 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:init": "pnpm drizzle-kit push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.4.1",
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/pg": "^8.11.11",
+    "drizzle-kit": "^0.30.5",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.8",
+    "better-auth": "^1.2.3",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.40.0",
+    "hono": "^4.7.4",
+    "pg": "^8.13.3"
+  }
+}

@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:17.2-alpine3.21
+    restart: unless-stopped
+    shm_size: 128mb
+    ports:
+      - 5432:5432
+    env_file:
+      - ./apps/api/.env
+  cache:
+    image: redis:7.4.2-alpine
+    restart: unless-stopped
+    ports:
+      - 6379:6379
