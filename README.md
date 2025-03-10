@@ -68,9 +68,9 @@ This is a comprehensive full-stack turborepo template that combines the best mod
    ```
 
 4. Run database migrations:
-  ```bash
-  pnpm --filter api db:init
-  ```
+   ```bash
+   pnpm --filter api db:init
+   ```
 
 5. Start the development server:
    ```bash
