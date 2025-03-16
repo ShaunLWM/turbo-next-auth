@@ -1,0 +1,9 @@
+---
+description: 
+globs: *
+alwaysApply: false
+---
+- Use TypeScript for all development.
+- Prioritize readability and maintainability in all code.
+- Ensure function and variable names are clear and descriptive.
+- Use concise, meaningful comments for complex logic.

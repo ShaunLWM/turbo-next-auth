@@ -1,0 +1,11 @@
+---
+description: 
+globs: apps/api/**/*.ts
+alwaysApply: false
+---
+Contents:
+- Always validate API inputs before processing requests.
+- Use async/await consistently; avoid callbacks.
+- Follow RESTful API conventions for clear endpoint structures.
+- Optimize database queries for performance and scalability.
+- Log errors properly but avoid excessive debugging logs in production.

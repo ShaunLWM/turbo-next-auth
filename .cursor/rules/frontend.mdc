@@ -1,0 +1,10 @@
+---
+description: 
+globs: *tsx
+alwaysApply: false
+---
+- Use functional React components instead of class components.
+- Apply Tailwind CSS for styling; avoid inline styles.
+- Use ShadCN components whenever possible - install it if it's not available
+- Components should be modular and reusable.
+- Maintain a consistent and clear component structure.
