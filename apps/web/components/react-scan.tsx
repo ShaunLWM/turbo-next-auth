@@ -1,0 +1,17 @@
+// path/to/ReactScanComponent
+
+"use client";
+// react-scan must be imported before react
+import { scan } from "react-scan";
+
+import { type JSX, useEffect } from "react";
+
+export function ReactScan(): JSX.Element {
+	useEffect(() => {
+		scan({
+			enabled: process.env.NODE_ENV !== "production",
+		});
+	}, []);
+
+	return <></>;
+}
