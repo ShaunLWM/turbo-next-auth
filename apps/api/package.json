@@ -12,9 +12,9 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "packageManager": "pnpm@10.4.1",
+  "packageManager": "pnpm@10.6.3",
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.17.24",
     "@types/pg": "^8.11.11",
     "drizzle-kit": "^0.30.5",
     "tsx": "^4.19.3",
@@ -22,10 +22,10 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.13.8",
-    "better-auth": "^1.2.3",
+    "better-auth": "^1.2.4",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.40.0",
     "hono": "^4.7.4",
-    "pg": "^8.13.3"
+    "pg": "^8.14.0"
   }
 }
