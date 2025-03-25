@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": []
+		"ignore": ["apps/app/src/routeTree.gen.ts"]
 	},
 	"formatter": {
 		"enabled": true,
