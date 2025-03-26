@@ -133,9 +133,6 @@ importers:
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      better-auth:
-        specifier: ^1.2.4
-        version: 1.2.4(typescript@5.8.2)
       lucide-react:
         specifier: ^0.483.0
         version: 0.483.0(react@19.0.0)
