@@ -14,7 +14,7 @@
   "license": "MIT",
   "packageManager": "pnpm@10.6.3",
   "devDependencies": {
-    "@types/node": "^20.17.24",
+    "@types/node": "^22.13.16",
     "@types/pg": "^8.11.11",
     "drizzle-kit": "^0.30.5",
     "tsx": "^4.19.3",
