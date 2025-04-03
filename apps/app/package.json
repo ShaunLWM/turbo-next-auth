@@ -32,6 +32,6 @@
     "@vitejs/plugin-react": "^4.3.4",
     "react-scan": "^0.3.3",
     "typescript": "~5.7.3",
-    "vite": "^6.2.2"
+    "vite": "^6.2.5"
   }
 }
