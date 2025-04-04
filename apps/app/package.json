@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.15",
-    "@tanstack/react-query": "^5.71.5",
+    "@tanstack/react-query": "^5.71.10",
     "@tanstack/react-router": "^1.114.34",
     "@workspace/ui": "workspace:*",
     "axios": "^1.8.4",
