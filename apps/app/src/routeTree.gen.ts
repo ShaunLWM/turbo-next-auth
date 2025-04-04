@@ -11,27 +11,20 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
-import { Route as LoginIndexImport } from './routes/login/index'
-import { Route as DashboardIndexImport } from './routes/dashboard/index'
+import { Route as protectedIndexImport } from './routes/(protected)/index'
+import { Route as publicLoginIndexImport } from './routes/(public)/login/index'
 
 // Create/Update Routes
 
-const IndexRoute = IndexImport.update({
-  id: '/',
+const protectedIndexRoute = protectedIndexImport.update({
+  id: '/(protected)/',
   path: '/',
   getParentRoute: () => rootRoute,
 } as any)
 
-const LoginIndexRoute = LoginIndexImport.update({
-  id: '/login/',
+const publicLoginIndexRoute = publicLoginIndexImport.update({
+  id: '/(public)/login/',
   path: '/login/',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const DashboardIndexRoute = DashboardIndexImport.update({
-  id: '/dashboard/',
-  path: '/dashboard/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -39,25 +32,18 @@ const DashboardIndexRoute = DashboardIndexImport.update({
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
+    '/(protected)/': {
+      id: '/(protected)/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexImport
+      preLoaderRoute: typeof protectedIndexImport
       parentRoute: typeof rootRoute
     }
-    '/dashboard/': {
-      id: '/dashboard/'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof DashboardIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/login/': {
-      id: '/login/'
+    '/(public)/login/': {
+      id: '/(public)/login/'
       path: '/login'
       fullPath: '/login'
-      preLoaderRoute: typeof LoginIndexImport
+      preLoaderRoute: typeof publicLoginIndexImport
       parentRoute: typeof rootRoute
     }
   }
@@ -66,43 +52,38 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/dashboard': typeof DashboardIndexRoute
-  '/login': typeof LoginIndexRoute
+  '/': typeof protectedIndexRoute
+  '/login': typeof publicLoginIndexRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/dashboard': typeof DashboardIndexRoute
-  '/login': typeof LoginIndexRoute
+  '/': typeof protectedIndexRoute
+  '/login': typeof publicLoginIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/dashboard/': typeof DashboardIndexRoute
-  '/login/': typeof LoginIndexRoute
+  '/(protected)/': typeof protectedIndexRoute
+  '/(public)/login/': typeof publicLoginIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/dashboard' | '/login'
+  fullPaths: '/' | '/login'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/dashboard' | '/login'
-  id: '__root__' | '/' | '/dashboard/' | '/login/'
+  to: '/' | '/login'
+  id: '__root__' | '/(protected)/' | '/(public)/login/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  DashboardIndexRoute: typeof DashboardIndexRoute
-  LoginIndexRoute: typeof LoginIndexRoute
+  protectedIndexRoute: typeof protectedIndexRoute
+  publicLoginIndexRoute: typeof publicLoginIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  DashboardIndexRoute: DashboardIndexRoute,
-  LoginIndexRoute: LoginIndexRoute,
+  protectedIndexRoute: protectedIndexRoute,
+  publicLoginIndexRoute: publicLoginIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -115,19 +96,15 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/",
-        "/dashboard/",
-        "/login/"
+        "/(protected)/",
+        "/(public)/login/"
       ]
     },
-    "/": {
-      "filePath": "index.tsx"
+    "/(protected)/": {
+      "filePath": "(protected)/index.tsx"
     },
-    "/dashboard/": {
-      "filePath": "dashboard/index.tsx"
-    },
-    "/login/": {
-      "filePath": "login/index.tsx"
+    "/(public)/login/": {
+      "filePath": "(public)/login/index.tsx"
     }
   }
 }

@@ -1,9 +1,9 @@
+import { signIn, useSession } from "@/lib/auth-client";
 import { Navigate, createFileRoute } from "@tanstack/react-router";
 import { Button } from "@workspace/ui/components/button";
 import { z } from "zod";
-import { signIn, useSession } from "../../lib/auth-client";
 
-export const Route = createFileRoute("/login/")({
+export const Route = createFileRoute("/(public)/login/")({
 	validateSearch: z.object({
 		redirect: z.string().optional().catch(""),
 	}),
