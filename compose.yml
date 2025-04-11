@@ -12,3 +12,17 @@ services:
     restart: unless-stopped
     ports:
       - 6379:6379
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: app
+    ports:
+      - "8000:8000"
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: api
+    ports:
+      - "5001:5001"
