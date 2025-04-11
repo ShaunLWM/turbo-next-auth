@@ -5,3 +5,6 @@ dist/
 .env.local
 .env.development.local
 .env.test.local
+apps/*/dist
+apps/*/node_modules
+*.env
