@@ -7,9 +7,11 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "db:init": "pnpm drizzle-kit push",
+    "db:init": "pnpx drizzle-kit push",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "pnpm db:migrate && node dist/index.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate --config drizzle.config.ts"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +20,6 @@
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@types/pg": "^8.11.11",
-    "drizzle-kit": "^0.30.6",
     "tsx": "^4.19.3",
     "typescript": "^5.8.3"
   },
@@ -26,6 +27,7 @@
     "@hono/node-server": "^1.14.0",
     "better-auth": "^1.2.5",
     "dotenv": "^16.5.0",
+    "drizzle-kit": "^0.30.6",
     "drizzle-orm": "^0.41.0",
     "hono": "^4.7.6",
     "pg": "^8.14.1"
