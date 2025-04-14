@@ -6,7 +6,9 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "biome check --write"
+    "format": "biome check --write",
+    "dev:docker": "docker compose up --build",
+    "prod:docker": "docker compose -f compose.yml up --build"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",

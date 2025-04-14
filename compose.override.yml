@@ -1,0 +1,28 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: app-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./apps/app:/usr/src/app/apps/app
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: api-dev
+    env_file:
+      - ./apps/api/.env.development
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./apps/api:/usr/src/app/apps/api
+    depends_on:
+      db:
+        condition: service_healthy
+      cache:
+        condition: service_healthy
+  # db and cache services inherited from compose.yml 
