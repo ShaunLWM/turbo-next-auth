@@ -72,7 +72,7 @@ importers:
         version: 1.116.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@workspace/ui':
         specifier: workspace:*
-        version: file:packages/ui(@types/react@19.0.12)(tailwindcss@4.0.15)
+        version: file:packages/ui(@types/react@19.0.12)(tailwindcss@4.1.4)
       axios:
         specifier: ^1.8.4
         version: 1.8.4
@@ -89,8 +89,8 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
       tailwindcss:
-        specifier: ^4.0.15
-        version: 4.0.15
+        specifier: ^4.1.4
+        version: 4.1.4
       zod:
         specifier: ^3.24.2
         version: 3.24.2
@@ -199,7 +199,7 @@ importers:
         version: 3.0.2
       tailwindcss-animate:
         specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@4.0.15)
+        version: 1.0.7(tailwindcss@4.1.4)
       zod:
         specifier: ^3.24.2
         version: 3.24.2
@@ -223,8 +223,8 @@ importers:
         specifier: workspace:*
         version: link:../typescript-config
       tailwindcss:
-        specifier: ^4.0.15
-        version: 4.0.15
+        specifier: ^4.1.4
+        version: 4.1.4
       typescript:
         specifier: ^5.8.2
         version: 5.8.2
@@ -3107,6 +3107,9 @@ packages:
   tailwindcss@4.0.15:
     resolution: {integrity: sha512-6ZMg+hHdMJpjpeCCFasX7K+U615U9D+7k5/cDK/iRwl6GptF24+I/AbKgOnXhVKePzrEyIXutLv36n4cRsq3Sg==}
 
+  tailwindcss@4.1.4:
+    resolution: {integrity: sha512-1ZIUqtPITFbv/DxRmDr5/agPqJwF69d24m9qmM1939TJehgY539CtzeZRjbLt5G6fSy/7YqqYsfvoTEw9xUI2A==}
+
   tapable@2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
@@ -4489,13 +4492,13 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
       tailwind-merge: 3.0.2
-      tailwindcss-animate: 1.0.7(tailwindcss@4.0.15)
+      tailwindcss-animate: 1.0.7(tailwindcss@4.1.4)
       zod: 3.24.2
     transitivePeerDependencies:
       - '@types/react'
       - tailwindcss
 
-  '@workspace/ui@file:packages/ui(@types/react@19.0.12)(tailwindcss@4.0.15)':
+  '@workspace/ui@file:packages/ui(@types/react@19.0.12)(tailwindcss@4.1.4)':
     dependencies:
       '@radix-ui/react-slot': 1.1.2(@types/react@19.0.12)(react@19.0.0)
       class-variance-authority: 0.7.1
@@ -4505,7 +4508,7 @@ snapshots:
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
       tailwind-merge: 3.0.2
-      tailwindcss-animate: 1.0.7(tailwindcss@4.0.15)
+      tailwindcss-animate: 1.0.7(tailwindcss@4.1.4)
       zod: 3.24.2
     transitivePeerDependencies:
       - '@types/react'
@@ -6054,11 +6057,13 @@ snapshots:
 
   tailwind-merge@3.0.2: {}
 
-  tailwindcss-animate@1.0.7(tailwindcss@4.0.15):
+  tailwindcss-animate@1.0.7(tailwindcss@4.1.4):
     dependencies:
-      tailwindcss: 4.0.15
+      tailwindcss: 4.1.4
 
   tailwindcss@4.0.15: {}
+
+  tailwindcss@4.1.4: {}
 
   tapable@2.2.1: {}
 
