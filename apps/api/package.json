@@ -16,10 +16,10 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "packageManager": "pnpm@10.8.1",
+  "packageManager": "pnpm@10.9.0",
   "devDependencies": {
     "@types/node": "^22.14.1",
-    "@types/pg": "^8.11.13",
+    "@types/pg": "^8.11.14",
     "tsx": "^4.19.3",
     "typescript": "^5.8.3"
   },
@@ -30,6 +30,6 @@
     "drizzle-kit": "^0.31.0",
     "drizzle-orm": "^0.42.0",
     "hono": "^4.7.7",
-    "pg": "^8.14.1"
+    "pg": "^8.15.5"
   }
 }
