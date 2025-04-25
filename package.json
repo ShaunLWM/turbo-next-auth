@@ -8,7 +8,8 @@
     "lint": "turbo lint",
     "format": "biome check --write",
     "dev:docker": "docker compose up --build",
-    "prod:docker": "docker compose -f compose.yml up --build"
+    "prod:docker": "docker compose -f compose.yml up --build",
+    "shadcn": "cd packages/ui && npx shadcn@canary"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
