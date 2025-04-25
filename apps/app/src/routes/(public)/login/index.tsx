@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/mode-toggle";
 import { signIn, useSession } from "@/lib/auth-client";
 import { Navigate, createFileRoute } from "@tanstack/react-router";
 import { Button } from "@workspace/ui/components/button";
@@ -36,6 +37,7 @@ function RouteComponent() {
 		<div>
 			Hello "/login/"!
 			<Button onClick={onClick}>Login with Github</Button>
+			<ModeToggle />
 		</div>
 	);
 }
