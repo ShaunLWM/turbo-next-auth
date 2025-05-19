@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "packageManager": "pnpm@10.9.0",
+  "packageManager": "pnpm@10.11.0",
   "dependencies": {
     "@tailwindcss/vite": "^4.0.15",
     "@tanstack/react-query": "^5.74.4",
